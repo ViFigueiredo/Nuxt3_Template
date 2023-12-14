@@ -1,5 +1,5 @@
 export interface ExampleInterface {
-    id: number;
-    description: string;
-    url: string;
+  id: number;
+  description: string;
+  url: string;
 }

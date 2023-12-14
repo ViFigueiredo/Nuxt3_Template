@@ -7,7 +7,7 @@ export const useExampleStore = defineStore(
     const example = ref<ExampleInterface[]>([]);
 
     const addExample = (data: ExampleInterface) => {
-      const dataFilter = example.value.some(v => v.id === data.id);
+      const dataFilter = example.value.some((v) => v.id === data.id);
       if (!dataFilter) example.value.push(data);
     };
 
@@ -18,7 +18,7 @@ export const useExampleStore = defineStore(
     persist: {
       // storage: persistedState.sessionStorage
       // storage: persistedState.cookies
-      storage: persistedState.localStorage
-    }
-  }
+      storage: persistedState.localStorage,
+    },
+  },
 );

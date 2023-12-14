@@ -6,7 +6,6 @@
       <slot></slot>
     </UContainer>
 
-    <UDivider class="mb-4" label="Fig Codes"
-      :ui="{ label: 'text-primary-500 dark:text-primary-400' }" />
+    <UDivider class="mb-4" label="Fig Codes" :ui="{ label: 'text-primary-500 dark:text-primary-400' }" />
   </div>
 </template>

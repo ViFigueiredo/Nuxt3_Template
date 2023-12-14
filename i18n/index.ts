@@ -7,6 +7,6 @@ export default defineI18nConfig(() => ({
     pt,
     en: {
       title: 'Home Page',
-    }
-  }
+    },
+  },
 }));

@@ -3,15 +3,16 @@ import 'vue3-toastify/dist/index.css';
 
 export default defineNuxtPlugin(({ vueApp }) => {
   vueApp.use(Vue3Toasity, {
-    autoclose: 2000
+    autoclose: 2000,
   } as ToastContainerOptions);
 
-  toast.error = (message: Content) => toast(message, {
-    type: 'error',
-    position: 'top-right',
-    icon: 'X',
-    theme: 'dark'
-  });
+  toast.error = (message: Content) =>
+    toast(message, {
+      type: 'error',
+      position: 'top-right',
+      icon: 'X',
+      theme: 'dark',
+    });
 
   return { provide: { toast } };
 });

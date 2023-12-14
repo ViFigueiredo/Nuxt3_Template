@@ -1,4 +1,4 @@
-import pg from "pg";
+import pg from 'pg';
 
 export const postgresClient = () => {
   const client = new pg.Pool({

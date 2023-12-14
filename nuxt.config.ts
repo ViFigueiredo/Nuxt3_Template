@@ -4,13 +4,15 @@ export default defineNuxtConfig({
   components: [
     '~/components',
     {
-      path: '~/shared', prefix: ''
-    }],
+      path: '~/shared',
+      prefix: '',
+    },
+  ],
   alias: {
-    css: '/assets/css'
+    css: '/assets/css',
   },
   app: {
-    baseURL: process.env.BASE_URL
+    baseURL: process.env.BASE_URL,
   },
   css: ['@/assets/css/main.css', '@/assets/css/tailwind.css'],
   modules: [
@@ -18,17 +20,17 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     [
-    '@nuxtjs/i18n',
-    {
-      vueI18n: './i18n'
-    }
-    ]
+      '@nuxtjs/i18n',
+      {
+        vueI18n: './i18n',
+      },
+    ],
   ],
   pinia: {
-    storesDirs: ['./stores/**']
+    storesDirs: ['./stores/**'],
   },
   ui: {
     global: true,
-    icons: []
-  }
+    icons: [],
+  },
 });
