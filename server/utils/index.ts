@@ -1,6 +1,6 @@
 import pg from 'pg';
 
-export const postgresClient = () => {
+export function postgresClient() {
   const client = new pg.Pool({
     host: process.env.DB_HOST,
     port: 5432,
@@ -12,4 +12,4 @@ export const postgresClient = () => {
   return {
     client,
   };
-};
+}
