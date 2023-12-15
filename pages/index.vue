@@ -15,7 +15,11 @@ onMounted(() => {
     </h1>
 
     <div class="grid grid-cols-2 items-center justify-center lg:grid-cols-2">
-      <UCard v-for="data in example" :key="data.id" class="mx-4 my-4">
+      <UCard
+        v-for="data in example"
+        :key="data.id"
+        class="mx-4 my-4"
+      >
         <h2 class="mb-4">
           {{ data.description }}
         </h2>
