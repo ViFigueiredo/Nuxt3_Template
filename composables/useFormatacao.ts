@@ -7,7 +7,9 @@ export default function () {
     const dataAtual = new Date().getTime();
     const diferencaEmMilissegundos = dataAtual - data.getTime();
 
-    diferencaEmDias.value = Math.floor(diferencaEmMilissegundos / (1000 * 60 * 60 * 24));
+    diferencaEmDias.value = Math.floor(
+      diferencaEmMilissegundos / (1000 * 60 * 60 * 24),
+    );
   };
 
   return { diasPassados, diferencaEmDias };

@@ -1,38 +1,32 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   components: [
-    "~/components",
+    '~/components',
     {
-      path: "~/shared",
-      prefix: "",
+      path: '~/shared',
+      prefix: '',
     },
   ],
   alias: {
-    css: "/assets/css",
+    css: '/assets/css',
   },
   app: {
     baseURL: process.env.BASE_URL,
   },
-  css: ["@/assets/css/main.css", "@/assets/css/tailwind.css"],
+  css: ['@/assets/css/main.css', '@/assets/css/tailwind.css'],
   modules: [
-    "@nuxt/ui",
-    "@pinia/nuxt",
-    "@pinia-plugin-persistedstate/nuxt",
+    '@nuxt/ui',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
     [
-      "@nuxtjs/i18n",
+      '@nuxtjs/i18n',
       {
-        vueI18n: "./i18n",
-      },
-    ],
-    [
-      "@nuxtjs/eslint-module",
-      {
-        /* module options */
+        vueI18n: './i18n',
       },
     ],
   ],
   pinia: {
-    storesDirs: ["./stores/**"],
+    storesDirs: ['./stores/**'],
   },
   ui: {
     global: true,
