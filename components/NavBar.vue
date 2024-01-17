@@ -23,7 +23,7 @@ const isDark = computed({
     <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <NuxtLink to="/">
-          <span class="font-semibold text-xl tracking-tight">Pablo Codes</span>
+          <span class="font-semibold text-xl tracking-tight">FigCodes</span>
         </NuxtLink>
       </div>
       <div class="block lg:hidden">
