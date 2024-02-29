@@ -14,7 +14,7 @@
   "dependencies": {
     "@nuxt/ui": "npm:@nuxt/ui-edge@latest",
     "@pinia/nuxt": "^0.5.1",
-    "pg": "^8.11.3",
+    "vue-vanta": "^0.0.1",
     "vue3-toastify": "^0.1.14"
   },
   "devDependencies": {

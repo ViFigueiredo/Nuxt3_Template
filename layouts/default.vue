@@ -2,14 +2,8 @@
   <div>
     <NavBar />
 
-    <UContainer class="my-4 min-h-screen">
-      <slot />
-    </UContainer>
+    <slot class="min-h-screen" />
 
-    <UDivider
-      class="mb-4"
-      label="Fig Codes"
-      :ui="{ label: 'text-primary-500 dark:text-primary-400' }"
-    />
+    <footer></footer>
   </div>
 </template>

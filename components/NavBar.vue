@@ -20,7 +20,7 @@ const isDark = computed({
 <template>
   <div>
     <slot />
-    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+    <nav class="flex items-center justify-between flex-wrap bg-[#222] p-6">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <NuxtLink to="/">
           <span class="font-semibold text-xl tracking-tight">FigCodes</span>
@@ -38,12 +38,12 @@ const isDark = computed({
           >
             <title>Menu</title>
             <path
-              :class="{ 'hidden': isOpen, 'inline-block': !isOpen }"
+              :class="{ hidden: isOpen, 'inline-block': !isOpen }"
               class="fill-current"
               d="M0 0h20v20H0z"
             />
             <path
-              :class="{ 'hidden': !isOpen, 'inline-block': isOpen }"
+              :class="{ hidden: !isOpen, 'inline-block': isOpen }"
               class="fill-current"
               d="M0 0h20v20H0z"
             />
@@ -52,23 +52,26 @@ const isDark = computed({
       </div>
       <div
         :class="{ hidden: !isOpen, block: isOpen }"
-        class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+        class="w-full block flex-grow lg:flex sm:items-center lg:w-auto"
       >
-        <div class="text-sm lg:flex-grow">
+        <div class="text-center lg:flex-grow">
           <NuxtLink
-            to="/"
-            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            v-for="rota in rotasPages()"
+            :key="rota.nome"
+            :to="rota.path"
+            class="mt-4 mx-20 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
           >
-            Home
+            {{ rota.nome }}
           </NuxtLink>
         </div>
 
         <div>
           <ClientOnly>
             <UButton
-              :icon="isDark
-                ? 'i-heroicons-moon-20-solid'
-                : 'i-heroicons-sun-20-solid'
+              :icon="
+                isDark
+                  ? 'i-heroicons-moon-20-solid'
+                  : 'i-heroicons-sun-20-solid'
               "
               color="gray"
               variant="ghost"
@@ -81,19 +84,18 @@ const isDark = computed({
             </template>
           </ClientOnly>
 
-          <select
-            v-model="locale"
-            class="ml-8"
-          >
-            <option value="pt">
-              pt
-            </option>
-            <option value="en">
-              en
-            </option>
+          <select v-model="locale" class="ml-8">
+            <option value="pt">pt</option>
+            <option value="en">en</option>
           </select>
         </div>
       </div>
     </nav>
   </div>
 </template>
+
+<style scoped>
+nav {
+  box-shadow: 2px 2px 2px white;
+}
+</style>
